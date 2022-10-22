@@ -83,7 +83,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="mdD-M9-6Ar">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mNZ-Pw-Ds2">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="rXb-gy-tqv" id="e91-b1-IL4"/>
                             </connections>
@@ -103,7 +103,6 @@
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemCyanColor"/>
-                        <color key="barTintColor" systemColor="tintColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
