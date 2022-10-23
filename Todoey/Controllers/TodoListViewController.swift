@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: SwipeTableViewController {
     
     var todoItems: Results<Item>?
     let realm = try! Realm()
@@ -21,6 +21,7 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //MARK: - Tableview Datasource Methods
@@ -32,8 +33,9 @@ class TodoListViewController: UITableViewController {
     
     // Provide a cell object for each row.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        
+        // Fetch a cell from superclass.
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             
@@ -43,18 +45,27 @@ class TodoListViewController: UITableViewController {
             // Ternary operator for check and uncheck cells
             // value            = condition   ? valueIfTrue: valueIfFalse
             cell.accessoryType = item.done ? .checkmark : .none
-            
-//            if item.dateCreated?.description != nil {
-//                print(item.dateCreated?.description)
-//            } else {
-//                print("error in date")
-//            }
-            
         } else {
             cell.textLabel?.text = "No Items added"
         }
         return cell
     }
+    
+    //MARK: - Delete Data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let item = todoItems?[indexPath.row] {
+            do {
+                try realm.write {
+                    realm.delete(item)
+                }
+            } catch {
+                print("error deleting item \(error)")
+            }
+        }
+    }
+
     
     //MARK: - TableView Delegate Methods
     
@@ -117,7 +128,6 @@ class TodoListViewController: UITableViewController {
     func loadItems() {
         
         todoItems = selectedCategory?.items.sorted(byKeyPath: "dateCreated", ascending: true)
-        
         tableView.reloadData()
     }
     

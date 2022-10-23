@@ -8,16 +8,17 @@
 import UIKit
 import RealmSwift
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController {
     
-    lazy var realm = try! Realm()
+    var realm = try! Realm()
     
     var categories: Results<Category>?
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadCategories()
+                
     }
     
     //MARK: - TableView Datasource Methods
@@ -29,10 +30,10 @@ class CategoryViewController: UITableViewController {
     
     // Provide a cell object for each row.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         
-        // Configure the cell’s contents.
+        // Fetch a cell from superclass.
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories added yet"
         
         return cell
@@ -59,7 +60,7 @@ class CategoryViewController: UITableViewController {
             let newCategory = Category()
             
             newCategory.name = textField.text!
-                        
+            
             self.save(category: newCategory)
         }
         
@@ -89,25 +90,35 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: - Delete Data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let category = categories?[indexPath.row] {
+            do {
+                try realm.write {
+                    realm.delete(category)
+                }
+            } catch {
+                print("error deleting category \(error)")
+            }
+        }
+    }
+    
     //MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        context.delete(itemArray[indexPath.row])
-        //        itemArray.remove(at: indexPath.row)
         
-       // tableView.deselectRow(at: indexPath, animated: true)
-
         performSegue(withIdentifier: "goToItems", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         let destinationVC = segue.destination as! TodoListViewController
-       
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedCategory = categories?[indexPath.row]
         }
-        
     }
     
 }
