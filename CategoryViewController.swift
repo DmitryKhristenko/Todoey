@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
@@ -18,7 +19,16 @@ class CategoryViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         loadCategories()
-                
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
+        
+        navBar.backgroundColor = UIColor(hexString: "1D9BF6")
+        
     }
     
     //MARK: - TableView Datasource Methods
@@ -34,7 +44,27 @@ class CategoryViewController: SwipeTableViewController {
         // Fetch a cell from superclass.
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories added yet"
+        if let category = categories?[indexPath.row] {
+            
+            cell.textLabel?.text = category.name
+            
+            if let categoryColor = UIColor(hexString: category.cellBackgroundColor) {
+                
+                cell.backgroundColor = categoryColor
+                
+                cell.textLabel?.textColor = ContrastColorOf(categoryColor, returnFlat: true)
+            } else {
+                do {
+                    try realm.write {
+                        cell.backgroundColor = UIColor.randomFlat()
+                        
+                        category.cellBackgroundColor = cell.backgroundColor?.hexValue() ?? "#9AACD6"
+                    }
+                } catch {
+                    print("Error saving color \(error)")
+                }
+            }
+        }
         
         return cell
     }
@@ -60,7 +90,6 @@ class CategoryViewController: SwipeTableViewController {
             let newCategory = Category()
             
             newCategory.name = textField.text!
-            
             self.save(category: newCategory)
         }
         

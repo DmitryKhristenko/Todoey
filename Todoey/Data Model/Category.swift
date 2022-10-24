@@ -11,6 +11,9 @@ import RealmSwift
 class Category: Object {
     
     @objc dynamic var name: String = ""
+    @objc dynamic var cellBackgroundColor: String = ""
     let items = List<Item>()
-    
+   
+    // cell.backgroundColor = UIColor.randomFlat().hexValue()
+
 }

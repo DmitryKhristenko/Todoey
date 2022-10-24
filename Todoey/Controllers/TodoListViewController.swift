@@ -7,11 +7,14 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class TodoListViewController: SwipeTableViewController {
     
     var todoItems: Results<Item>?
     let realm = try! Realm()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var selectedCategory: Category? {
         didSet {
@@ -21,6 +24,32 @@ class TodoListViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let colourHex = selectedCategory?.cellBackgroundColor {
+            
+            title = selectedCategory!.name
+            
+            guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
+            
+            if let navBarColour = UIColor(hexString: colourHex) {
+                
+                navBar.backgroundColor = navBarColour
+                
+                navBar.tintColor = ContrastColorOf(navBarColour, returnFlat: true)
+                
+                navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ContrastColorOf(navBarColour, returnFlat: true)]
+                
+                searchBar.barTintColor = navBarColour
+                
+                searchBar.searchTextField.backgroundColor = FlatWhite()
+                
+            }
+        
+            tableView.separatorStyle = .none
+        }
         
     }
     
@@ -42,12 +71,20 @@ class TodoListViewController: SwipeTableViewController {
             // Configure the cell’s contents.
             cell.textLabel?.text = item.title
             
+            if let colour = UIColor(hexString: selectedCategory?.cellBackgroundColor ?? "#9AACD6")?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
+                
+                cell.backgroundColor = colour
+                
+                cell.textLabel?.textColor = ContrastColorOf(colour, returnFlat: true)
+            }
+            
             // Ternary operator for check and uncheck cells
             // value            = condition   ? valueIfTrue: valueIfFalse
             cell.accessoryType = item.done ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No Items added"
         }
+
         return cell
     }
     
@@ -65,7 +102,7 @@ class TodoListViewController: SwipeTableViewController {
             }
         }
     }
-
+    
     
     //MARK: - TableView Delegate Methods
     
