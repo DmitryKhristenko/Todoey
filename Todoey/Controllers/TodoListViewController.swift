@@ -77,7 +77,6 @@ class TodoListViewController: SwipeTableViewController {
             do {
                 try realm?.write {
                     item.done = !item.done
-                    //                    realm.delete(item)
                 }
             } catch {
                 print("Error savind done status, \(error)")
