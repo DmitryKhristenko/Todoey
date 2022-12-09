@@ -5,6 +5,7 @@
 *.xcuserdata
 */xcuserdata/*
 *xcworkspace/xcuserdata/*
+xcuserdata/
 
 # Icon must end with two \r
 Icon
