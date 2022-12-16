@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/dmitry4h/iOS dev/Todoey/build/Debug-iphoneos/SwipeCellKit/SwipeCellKit.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/unextended-module.modulemap",
+    }]
+  }]
+}

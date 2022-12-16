@@ -1,0 +1,25 @@
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeOptions.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeOptions.o"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeOptions.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeOptions.dia"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeOptions.d"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeFeedback.swift":
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeFeedback.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeFeedback.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeFeedback.dia"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeFeedback.o"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeExpansionStyle.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpansionStyle.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpansionStyle.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpansionStyle.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpansionStyle.dia"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeExpanding.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpanding.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpanding.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpanding.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeExpanding.dia"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeController.swift":
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeController.dia"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeController.swiftdeps"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeController.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeController.d"

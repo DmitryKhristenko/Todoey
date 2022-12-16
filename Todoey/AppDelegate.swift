@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             _ = try Realm()
         } catch {
-            print("Error initialising new realm \(error)")
+            Logger.shared.debugPrint("Error initialising new realm \(error)")
         }
         return true
     }

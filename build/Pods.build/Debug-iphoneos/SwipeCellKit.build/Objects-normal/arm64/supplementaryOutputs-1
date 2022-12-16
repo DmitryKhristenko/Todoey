@@ -1,0 +1,30 @@
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeAccessibilityCustomAction.swift":
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAccessibilityCustomAction.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAccessibilityCustomAction.dia"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAccessibilityCustomAction.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAccessibilityCustomAction.d"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeActionButton.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionButton.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionButton.d"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionButton.dia"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionButton.swiftdeps"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/Extensions.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Extensions.o"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Extensions.swiftdeps"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Extensions.d"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Extensions.dia"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeAction.swift":
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAction.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAction.swiftdeps"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAction.o"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAction.dia"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeActionsView.swift":
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionsView.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionsView.dia"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionsView.d"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionsView.o"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/Swipeable.swift":
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Swipeable.d"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Swipeable.dia"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Swipeable.o"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/Swipeable.swiftdeps"

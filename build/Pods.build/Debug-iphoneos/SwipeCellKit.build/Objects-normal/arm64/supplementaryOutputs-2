@@ -1,0 +1,30 @@
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeAnimator.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAnimator.o"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAnimator.dia"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAnimator.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeAnimator.swiftdeps"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeCollectionViewCell.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell.o"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell.d"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell.dia"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell.swiftdeps"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeCollectionViewCell+Accessibility.swift":
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Accessibility.d"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Accessibility.o"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Accessibility.dia"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Accessibility.swiftdeps"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeActionTransitioning.swift":
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionTransitioning.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionTransitioning.dia"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionTransitioning.d"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeActionTransitioning.o"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeCollectionViewCell+Display.swift":
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Display.d"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Display.swiftdeps"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Display.dia"
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCell+Display.o"
+"/Users/dmitry4h/iOS dev/Todoey/Pods/SwipeCellKit/Source/SwipeCollectionViewCellDelegate.swift":
+  object: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCellDelegate.o"
+  diagnostics: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCellDelegate.dia"
+  swift-dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCellDelegate.swiftdeps"
+  dependencies: "/Users/dmitry4h/iOS dev/Todoey/build/Pods.build/Debug-iphoneos/SwipeCellKit.build/Objects-normal/arm64/SwipeCollectionViewCellDelegate.d"

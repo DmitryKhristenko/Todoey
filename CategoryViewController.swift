@@ -42,7 +42,7 @@ class CategoryViewController: SwipeTableViewController {
                         category.cellBackgroundColor = cell.backgroundColor?.hexValue() ?? "#9AACD6"
                     }
                 } catch {
-                    print("Error saving color \(error)")
+                    Logger.shared.debugPrint("Error saving color \(error)")
                 }
             }
         }
@@ -79,7 +79,7 @@ class CategoryViewController: SwipeTableViewController {
                 realm?.add(category)
             }
         } catch {
-            print("Error saving category \(error)")
+            Logger.shared.debugPrint("Error saving category \(error)")
         }
         tableView.reloadData()
     }
@@ -95,7 +95,7 @@ class CategoryViewController: SwipeTableViewController {
                     realm?.delete(category)
                 }
             } catch {
-                print("error deleting category \(error)")
+                Logger.shared.debugPrint("Error deleting category \(error)")
             }
         }
     }
