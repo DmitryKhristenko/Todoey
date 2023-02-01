@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Todoey
 //
-//  Created by Дмитрий Х on 10.10.22.
+//  Created by Дмитрий Х on 29.01.23.
 //
 
 import UIKit
@@ -67,8 +67,51 @@ class TodoListViewController: SwipeTableViewController {
                     realm?.delete(item)
                 }
             } catch {
-                print("error deleting item \(error)")
+                Logger.shared.debugPrint("error deleting item \(error)")
             }
+        }
+    }
+    // MARK: - Change cell name
+    override func changeCellName(at indexPath: IndexPath) {
+        if let item = todoItems?[indexPath.row] {
+            var textField = UITextField()
+            let alert = UIAlertController(title: "Edit name", message: "", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (_: UIAlertAction!) -> Void in }
+            let action = UIAlertAction(title: "Edit item", style: .default) { [self]_ in
+                //                what will happen once the user clicks edit
+                do {
+                    try realm?.write {
+                        item.title = textField.text!
+                    }
+                } catch {
+                    Logger.shared.debugPrint("Error saving item \(error)")
+                }
+                tableView.reloadData()
+            }
+            action.isEnabled = false
+            alert.addAction(action)
+            alert.addAction(cancelAction)
+            alert.addTextField { (alertTextField) in
+                alertTextField.placeholder = "Edit category name"
+                textField = alertTextField
+                NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main, using: {_ in
+                    let textCount = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
+                    let textIsNotEmpty = textCount > 0
+                    if item.title == textField.text! {
+                        let attributedString = NSAttributedString(string: "New item name can not match the previous one.", attributes: [
+                            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12),
+                            NSAttributedString.Key.foregroundColor : UIColor.red
+                        ])
+                        alert.setValue(attributedString, forKey: "attributedMessage")
+                        alert.message = "New item name can not match the previous one."
+                        action.isEnabled = false
+                    } else {
+                        action.isEnabled = textIsNotEmpty
+                        alert.message = ""
+                    }
+                })
+            }
+            present(alert, animated: true, completion: nil)
         }
     }
     // MARK: - TableView Delegate Methods
@@ -79,7 +122,7 @@ class TodoListViewController: SwipeTableViewController {
                     item.done = !item.done
                 }
             } catch {
-                print("Error savind done status, \(error)")
+                Logger.shared.debugPrint("Error savind done status, \(error)")
             }
         }
         tableView.reloadData()
@@ -89,6 +132,7 @@ class TodoListViewController: SwipeTableViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (_: UIAlertAction!) -> Void in }
         let action = UIAlertAction(title: "Add Item", style: .default) {_ in
             // what will happen once the user clicks the "Add Item" button on UIAlert
             if let currentCategory = self.selectedCategory {
@@ -106,6 +150,7 @@ class TodoListViewController: SwipeTableViewController {
         }
         action.isEnabled = false
         alert.addAction(action)
+        alert.addAction(cancelAction)
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
             textField = alertTextField

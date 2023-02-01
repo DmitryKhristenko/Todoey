@@ -2,7 +2,7 @@
 //  SwipeTableViewController.swift
 //  Todoey
 //
-//  Created by Дмитрий Х on 23.10.22.
+//  Created by Дмитрий Х on 29.01.23.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     // MARK: - TableView datasource methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SwipeTableViewCell else {
-            print("error in override func tableView")
+            Logger.shared.debugPrint("error in override func tableView")
             return UITableViewCell()
         }
         cell.delegate = self
@@ -27,16 +27,21 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { _, indexPath in
             self.updateModel(at: indexPath)
         }
+        let editAction = SwipeAction(style: .default, title: "Edit") { _, indexPath in
+            self.changeCellName(at: indexPath)
+        }
         // customize the action appearance
         deleteAction.image = UIImage(named: "delete-icon")
-        return [deleteAction]
+        editAction.image = UIImage(systemName: "rectangle.and.pencil.and.ellipsis")
+        return [deleteAction, editAction]
     }
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
         var options = SwipeOptions()
         options.expansionStyle = .destructive
+        options.transitionStyle = .border
         return options
     }
-    func updateModel (at indexPath: IndexPath) {
-        // update date model
-    }
+    // this functions are overridden from CategoryVC and TodoListVC
+    func updateModel (at indexPath: IndexPath) { }
+    func changeCellName(at indexPath: IndexPath) { }
 }
